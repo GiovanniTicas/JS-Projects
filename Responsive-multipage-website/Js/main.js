@@ -22,3 +22,21 @@ faqs.forEach((faq) => {
     }
   })
 })
+
+// toggle navbar in tablet breakpoint
+
+const menu = document.querySelector(".nav__menu")
+const openMenuBtn = document.querySelector("#open-menu-btn")
+const closeMenuBtn = document.querySelector("#close-menu-btn")
+
+openMenuBtn.addEventListener("click", () => {
+  openMenuBtn.style.display = "none"
+  menu.style.display = "flex"
+  closeMenuBtn.style.display = "inline-block"
+})
+
+closeMenuBtn.addEventListener("click", () => {
+  openMenuBtn.style.display = "inline-block"
+  menu.style.display = "none"
+  closeMenuBtn.style.display = "none"
+})
